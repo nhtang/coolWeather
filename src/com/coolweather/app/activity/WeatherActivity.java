@@ -144,7 +144,7 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		temp1Text.setText(prefs.getString("temp1", ""));
 		temp2Text.setText(prefs.getString("temp2", ""));
 		weatherDespText.setText(prefs.getString("weather_desp", ""));
-		publishText.setText("今天" + prefs.getString("publish_name", "") + "发布");
+		publishText.setText("今天" + prefs.getString("publish_time", "") + "发布");
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
@@ -161,7 +161,7 @@ public class WeatherActivity extends Activity implements OnClickListener {
 			finish();
 			break;
 		case R.id.refresh_weather:
-			publishText.setText("同步中，，，");
+			publishText.setText("同步中...");
 			SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 			String weatherCode = prefs.getString("weather_code", "");
 			if(!TextUtils.isEmpty(weatherCode)){
