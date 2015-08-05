@@ -6,9 +6,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
+
 public class HttpUtil {
 	
-	public static void sendHttpURLResquest(final String address, final HttpCallbackListener listener){
+	public static void sendHttpResquest(final String address, final HttpCallbackListener listener){
 		new Thread(new Runnable(){
 
 			@Override
@@ -46,5 +48,7 @@ public class HttpUtil {
 			
 		}).start();
 	}
+
+	
 
 }//class
